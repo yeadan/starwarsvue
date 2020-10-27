@@ -1,5 +1,5 @@
-# okupa
-__Primera versión destar-wars-vuejs__   
+# star-wars-vuejs
+__Primera versión de star-wars-vuejs__   
    
 ## Dependencias utilizadas:   
    
