@@ -122,6 +122,8 @@ export default {
         console.log(error)
       })
     },
+    // Función para devolver los datos de starships,
+    // films, vehicles, homeworld y species
     getdata(url,index,id) {
       let element=index+id
       axios.get(url)
