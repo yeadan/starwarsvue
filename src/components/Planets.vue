@@ -73,7 +73,7 @@
 
 <script>
 import axios from 'axios'
-//import $ from 'jquery'
+import {jediMixins} from '@/mixins.js'
 export default {
   data () {
     return {
@@ -84,6 +84,7 @@ export default {
       listplanets: [],
     }
   },
+  mixins: [jediMixins],
   created() {
     this.loadplanets('https://swapi.dev/api/planets')
   },
@@ -117,21 +118,6 @@ export default {
       axios.get(url)
       .then(response => {
         this.planetdata = response.data
-      })
-      .catch(error => {
-        console.log(error)
-      })
-    },
-    // Función para devolver los datos de starships,
-    // films, vehicles, homeworld y species
-    getdata(url,index,id) {
-      let element=index+id
-      axios.get(url)
-      .then(response => {
-        if (index == 'film')
-          document.getElementById(element).innerHTML = response.data.title
-        else
-          document.getElementById(element).innerHTML = response.data.name
       })
       .catch(error => {
         console.log(error)
