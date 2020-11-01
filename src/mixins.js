@@ -37,6 +37,7 @@ export const jediMixins = {
               console.log(error)
             })
           },
+          //Carga los datos iniciales generales
           dataload(index) {
             this.onedata = ''
             this.number = '<loading...>'

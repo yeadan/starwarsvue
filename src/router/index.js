@@ -14,20 +14,22 @@ const routes = [
   {
     path: '/api/people',
     name: 'People',
-    // lazy-load
-    component: () => import('../components/People.vue')
+    //lazy load
+    component: () => import("../components/BasicComponent.vue"),
+    //Dependiendo del titulo creara un componente u otro a partir del Basic
+    props: { titulo: "People" }
   },
   {
     path: '/api/planets',
     name: 'Planets',
-    // lazy-load
-    component: () => import('../components/Planets.vue')
+    component: () => import("../components/BasicComponent.vue"),
+    props: { titulo: "Planets" }
   },
   {
     path: '/api/starships',
     name: 'Starships',
-    // lazy-load
-    component: () => import('../components/Starships.vue')
+    component: () => import("../components/BasicComponent.vue"),
+    props: { titulo: "Starships" }
   },
   { path: '/404', component: NotFound },  
   { path: '*', redirect: '/404' }, 
