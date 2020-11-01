@@ -29,15 +29,6 @@
 import {jediMixins} from '@/mixins.js'
 export default {
     props: ['cdata'],
-    mixins: [jediMixins],
-    watch: {
-        // Carga los datos si cambia la ruta
-        '$route'() {
-          //location.$forceUpdate()
-          //location.reload();
-    this.$forceUpdate()
-    //this.cdata = onedata
-        }
-    }
+    mixins: [jediMixins]
 }
 </script>   
